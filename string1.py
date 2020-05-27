@@ -74,13 +74,11 @@ def fix_start(s):
 def mix_up(a, b):
     return a.replace(a[:2], b[:2]) + " " + b.replace(b[:2], a[:2])
 
-    
-
     # Provided simple test() function used in main() to print
     # what each function returns vs. what it's supposed to return.
 
 
-def test(got, expected):
+def testgot, expected):
     if got == expected:
         prefix = ' OK '
     else:
