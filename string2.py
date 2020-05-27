@@ -24,13 +24,13 @@ __author__ = "Jessica Woods"
 
 def verbing(s):
     if len(s) >= 3:
-      if s[-3:] == "ing":
-        s += "ly"
-      else:
-        s += "ing"
-      return s
+        if s[-3:] == "ing":
+            s += "ly"
+        else:
+            s += "ing"
+        return s
     else:
-      return s
+        return s
 
 
 # E. not_bad
@@ -43,13 +43,12 @@ def verbing(s):
 
 
 def not_bad(s):
-   z = s.find('not')
-   if z > 0:
-     y = s.find('bad')
-     if y > z+3:
-       return s[:z] + 'good' + s[y+3:]
-   return s
-
+    z = s.find('not')
+    if z > 0:
+        y = s.find('bad')
+        if y > z+3:
+            return s[:z] + 'good' + s[y+3:]
+    return s
 
 
 # F. front_back
@@ -63,13 +62,14 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    aV = len(a)/2+(len(a)%2)
-    bV = len(b)/2+(len(b)%2)
-    return a[:aV]+b[:bV]+a[aV:]+b[bV:]
+    a_split = (len(a) + 1) // 2
+    b_split = (len(b) + 1) // 2
+    return a[:a_split] + b[:b_split] + a[a_split:] + b[b_split:]
+
+    # Provided simple test() function used in main() to print
+    # what each function returns vs. what it's supposed to return.
 
 
-# Provided simple test() function used in main() to print
-# what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
